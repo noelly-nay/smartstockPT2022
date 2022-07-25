@@ -1,0 +1,1 @@
+# smartstockPT2022
