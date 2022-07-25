@@ -24,9 +24,9 @@ function queryProductsFromStocks(datas){
             
             const q = a[dataKey].quantity;
             if(Array.isArray(q)){
-                a[dataKey].quantity.push(b.id);
+                a[dataKey].quantity.push(b._id);
             }else{
-                a[dataKey].quantity = [b.id];
+                a[dataKey].quantity = [b._id];
             }
 
             a[dataKey].price = b.price;

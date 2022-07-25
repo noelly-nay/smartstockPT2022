@@ -6,8 +6,10 @@ async function saveStocksToDatabase(stocks){
     let expandedStocks = expandStockInputWhenMany(stocks);
     expandedStocks =  expandedStocks.map(x=> {
         x._id = x.id;
+        delete x.id;
         return x;
-    })
+    });
+    // console.log(expandedStocks);
     await withMongoDbConnection('smartstock', async (db)=>{
         await db.collection('stocks').insertMany(expandedStocks);
     });

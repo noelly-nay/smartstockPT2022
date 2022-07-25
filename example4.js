@@ -8,8 +8,9 @@ const {MongoClient, Db} = require('mongodb');
 
 async function withMongoDbConnection(dataBaseName, callback){
     const connection = await new MongoClient('mongodb://localhost:27017').connect(); // get connection
-    await callback(connection.db(dataBaseName)); // use connection
-    connection.close().catch(console.log); // terminate connection
+    return await callback(connection.db(dataBaseName)).finally(()=>{
+        connection.close().catch(console.log); // terminate connection
+    }); // use connection
 }
 
 // databaseName
