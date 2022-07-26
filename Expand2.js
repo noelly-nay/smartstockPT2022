@@ -1,4 +1,4 @@
-const { expandStockInput } = require("./example1");
+const { expandStockInput } = require("./Expand1");
 
 
 function expandStockInputWhenMany(items){

@@ -1,8 +1,3 @@
-// const _items = {
-//   name: "water",
-//   quantity: 4,
-//   price: 250,
-// };
 
 function expandStockInput(item) {
   const jibu = [];

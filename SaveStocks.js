@@ -1,5 +1,5 @@
-const { expandStockInputWhenMany } = require("./example2");
-const { withMongoDbConnection } = require("./example4");
+const { expandStockInputWhenMany } = require("./Expand2");
+const { withMongoDbConnection } = require("./Connection");
 const { stockItems } = require("./mocks");
 
 async function saveStocksToDatabase(stocks){

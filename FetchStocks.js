@@ -1,5 +1,5 @@
-const { queryProductsFromStocks } = require("./example3");
-const { withMongoDbConnection } = require("./example4");
+const { queryProductsFromStocks } = require("./QueryProducts");
+const { withMongoDbConnection } = require("./Connection");
 
 async function fetchStocksFromDatabase(){
     const docs = await withMongoDbConnection('smartstock', async (db)=>{
